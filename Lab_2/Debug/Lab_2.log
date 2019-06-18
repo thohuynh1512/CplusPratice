@@ -1,0 +1,4 @@
+﻿  Source.cpp
+E:\Labs\Lab_2\Source.cpp(79): warning C4326: return type of 'main' should be 'int' instead of 'void'
+E:\Labs\Lab_2\Source.cpp(80): warning C4101: 'doC': unreferenced local variable
+  Lab_2.vcxproj -> E:\Labs\Lab_2\Debug\Lab_2.exe
