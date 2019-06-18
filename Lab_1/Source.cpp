@@ -32,27 +32,33 @@ void facN(int n) {
 }
 
 //find UCLN, BCNN
-int ucln(int a, int b) {
+void ucln_bcnn(int a, int b) {
+	int ucln, bcnn;
+	int tempA = a, tempB = b;
 	if ((a < 0) || (b < 0)) {
 		cout << "error value number";
 	}
 	else
 	{
-		while (a!=b) {
+		while (a != b) {
 			if (a > b) {
-				a = a - b;
+				a -= b;
 			}
 			else
 			{
-				b = b - a;
+				b -= a;
 			}
 		}
+		ucln = a;
+		bcnn = tempA * tempB / ucln;
+		cout << "UCLL and BCNN of " << tempA << " & " << tempB << " is " << ucln << "\t" << bcnn;
 	}
-	return a;
+	
 }
 
 void main() {
 	int choose, year, n, a, b;
+	int BCNN, UCLN;
 	cout << "enter a option (1: check leap year, 2: factorial of number, 3: UCLN_BCNN): ";
 	cin >> choose;
 	switch (choose)
@@ -75,6 +81,6 @@ void main() {
 		cin >> a;
 		cout << "b = ";
 		cin >> b;
-		cout << "UCLN and BCNN is " << ucln(a,b) << " & " << a*b/ucln(a,b) << endl;
+		ucln_bcnn(a, b);
 	}
 }
