@@ -20,11 +20,25 @@ void Bai1() {
 
 //trình chuyển đổi giữa đô ̣C và đô ̣F: °F = °C ∗9 / 5 + 32.
 void Bai2() {
-	int doC;
-	cout << "nhap do C = ";
-	cin >> doC;
-	float doF = (float)doC * 9 / 5 + 32;
-	cout << doC << " do C tuong ung voi " << setprecision(2) << fixed << doF << " do F";
+	float doC, doF, value;
+	int n; //option number
+	cout << "Chuyen doi giua do C va do F (chon 1 - chuyen C qua F, chon 2 - chuyen F qua C): ";
+	cin >> n;
+	switch (n)
+	{
+		//chon 1: chuyen C qua F
+		case 1:
+			cout << "Nhap do C = ";
+			cin >> doC;
+			value = doC * 9 / 5 + 32;
+			break;
+		//chon 2: chuyen F qua C
+		case 2:
+			cout << "Nhap do F = ";
+			cin >> doF;
+			value = (doF - 32) * 5 / 9;
+	}
+	cout << "Gia tri cuoi cung sau khi chuyen la " << setprecision(2) << fixed << value;
 }
 
 //in so luong sinh vien 3 mien
